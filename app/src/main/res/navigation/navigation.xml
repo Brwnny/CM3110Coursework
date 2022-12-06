@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/landingFragments">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.cm3110coursework.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.cm3110coursework.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cm3110coursework.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recepiesFragment"
+            app:destination="@id/recepiesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ingredientsFragment"
+            app:destination="@id/ingredientsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mealPanningFragment"
+            app:destination="@id/mealPanningFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recepiesFragment"
+        android:name="com.example.cm3110coursework.RecipesFragment"
+        android:label="fragment_recepies"
+        tools:layout="@layout/fragment_recipes" />
+    <fragment
+        android:id="@+id/ingredientsFragment"
+        android:name="com.example.cm3110coursework.IngredientsFragment"
+        android:label="fragment_ingredients"
+        tools:layout="@layout/fragment_ingredients" />
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.cm3110coursework.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" />
+    <fragment
+        android:id="@+id/mealPanningFragment"
+        android:name="com.example.cm3110coursework.MealPanningFragment"
+        android:label="fragment_meal_panning"
+        tools:layout="@layout/fragment_meal_panning" />
+    <fragment
+        android:id="@+id/landingFragments"
+        android:name="com.example.cm3110coursework.LandingFragments"
+        android:label="fragment_landing_fragments"
+        tools:layout="@layout/fragment_landing_fragments" >
+        <action
+            android:id="@+id/action_landingFragments_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_landingFragments_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+</navigation>
